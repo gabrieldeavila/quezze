@@ -1,0 +1,14 @@
+<svg width="48.386mm" height="36.011mm" version="1.1" viewBox="0 0 48.386 36.011" >
+ 
+ <g transform="translate(58.325 102.18)">
+  <path d="m-56.047-68.108c0.48938-0.88375 14.527-14.809 14.527-14.809l14.888 5.7904 14.718-23.526" fill="none"  stroke-width="1.8587"/>
+  <g stroke-linecap="round">
+   <ellipse cx="-56.17" cy="-68.368" rx="2.1549" ry="2.1967" stroke-width=".10228" style="paint-order:stroke fill markers"/>
+   <g stroke-width=".10228">
+    <ellipse cx="-41.372" cy="-82.652" rx="2.1549" ry="2.1967" style="paint-order:stroke fill markers"/>
+    <ellipse cx="-26.787" cy="-77.367" rx="2.1549" ry="2.1967" style="paint-order:stroke fill markers"/>
+    <ellipse cx="-12.094" cy="-99.986" rx="2.1549" ry="2.1967" style="paint-order:stroke fill markers"/>
+   </g>
+  </g>
+ </g>
+</svg>

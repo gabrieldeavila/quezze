@@ -1,0 +1,46 @@
+nav
+  position: fixed
+  width: 100%
+  height: 6rem
+  background: $nBlack
+  color: $cGrey
+  .menu
+    cursor: pointer
+  .logo
+    @include flex
+    user-select: none
+    cursor: pointer
+  p
+    font-family: 'Prompt', serif
+    font-size: 2rem
+    color: $red
+  .field-flex
+    .field-flex
+      width: 25%
+      justify-content: space-around
+      align-self: self-end
+    .search
+      width: 75%
+      @include flex
+      &-input
+        @include flex(row, right)
+        width: 436px
+        border: 2px solid $cGrey
+        border-radius: 3px 
+        input
+          padding: 0.5rem
+          font-size: 1rem
+          height: 100%
+          font-weight: 500
+          border: none
+          background: none
+          outline: none
+          width: 90%
+          color: $cGrey
+        .icon
+          width: 10%
+          @include flex
+          padding: 0.5rem 0
+          border-left: 2px solid $cGrey
+
+        

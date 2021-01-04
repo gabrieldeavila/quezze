@@ -1,0 +1,40 @@
+*
+  font-family: 'Montserrat', sans-serif
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+//margins & paddings
+
+$val : (1, 2, 3, 4, 5, 6)
+
+@each $v in $val 
+  .mt-#{$v}
+    margin-top: #{$v}rem
+  
+  .mb-#{$v}
+    margin-bottom: #{$v}rem
+  
+  .ml-#{$v}
+    margin-left: #{$v}rem
+  
+  .mr-#{$v}
+    margin-right: #{$v}rem
+
+  .m-#{$v}
+    margin: #{$v}rem
+
+  .p-#{$v}
+    padding: #{$v}rem
+  
+  .pt-#{$v}
+    padding-top: #{$v}rem
+
+  .pb-#{$v}
+    padding-bottom: #{$v}rem
+
+  .pl-#{$v}
+    padding-left: #{$v}rem
+
+  .pr-#{$v}
+    padding-right: #{$v}rem
