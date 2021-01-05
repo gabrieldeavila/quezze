@@ -1,24 +1,70 @@
+.selected
+  i
+    p
+     color: $cGrey
+    svg
+     stroke: $cGrey 
+     fill: $cGrey 
+
+.normal
+  i
+    p
+     color: $nGrey
+    svg
+      stroke: $nGrey 
+      fill: $nGrey 
+
+
+.closed
+  @extend %cubic1
+  width: 8%
+  .icon-field
+   margin-top: 2.6rem
+   @include flex
+   i
+     @extend %cubic1
+     @include flex(column)
+     svg
+       height: auto
+       width: 40%
+
+   p
+     padding-top: 0.5rem
+     font-weight: 700
+     font-size: 11px
+     
+.opened
+  @extend %cubic1
+  width: 16%
+  .icon-field
+   margin-top: 2.6rem
+   @include flex
+   i
+     @extend %cubic1
+     @include flex(row)
+     svg
+       height: auto
+       width: 25%
+   p
+     margin-left: 1rem
+     padding-top: 0.5rem
+     font-weight: 700
+     font-size: 15px
 .sidebar
   color: $cGrey
   background: $nBlack
-  width: 8%
   position: fixed
   top: 6rem
-  padding: 1rem
   height: 100%
-  @include flex(column, top)
-  .icon-field
-    margin-top: 2.6rem
-    @include flex
-    i
-      @include flex
-      svg
-        height: auto
-        width: 50%
-        stroke: $nGrey 
-        fill: $nGrey 
-    p
-      padding-top: 0.5rem
-      font-weight: 700
-      font-size: 12px
-      color: $nGrey
+  overflow: auto
+  @include flex(column, right, center, nowrap)
+  &::-webkit-scrollbar
+    background-color: $nGrey 
+    width: 10px
+  &::-webkit-scrollbar-track 
+    background: red
+  div:first-child
+    padding: 0.5rem
+    overflow: auto
+    
+ 

@@ -1,4 +1,5 @@
 nav
+  padding: 1rem 2rem
   position: fixed
   width: 100%
   height: 6rem
@@ -6,18 +7,22 @@ nav
   color: $cGrey
   .menu
     cursor: pointer
+    svg
+      width: 30px
   .logo
+    svg
+      width: 36px
     @include flex
     user-select: none
     cursor: pointer
   p
     font-family: 'Prompt', serif
-    font-size: 2rem
+    font-size: 1.5rem
     color: $red
   .field-flex
     .field-flex
-      width: 25%
-      justify-content: space-around
+      width: 17%
+      justify-content: space-between
       align-self: self-end
     .search
       width: 75%
