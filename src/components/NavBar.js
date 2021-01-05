@@ -3,13 +3,16 @@ import { ReactComponent as Logo } from "../icons/logo.svg";
 import { ReactComponent as Menu } from "../icons/menu.svg";
 import { ReactComponent as Search } from "../icons/search.svg";
 
-const NavBar = () => {
+const NavBar = ({navClicked, setNavClicked}) => {
+  const changeNavValue = () => {
+    setNavClicked(!navClicked)
+  }
   return (
     <div>
-      <nav className="p-1">
+      <nav>
         <div className="field-flex">
           <div className="field-flex">
-            <div className="menu">
+            <div onClick={changeNavValue} className="menu">
               <Menu />
             </div>
             <div className="logo">

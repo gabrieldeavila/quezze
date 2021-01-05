@@ -1,13 +1,17 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 
 const App = () => {
+  const [navClicked, setNavClicked] = useState(false)
+  useEffect(()=>{
+    
+  }, [navClicked])
   return (
     <div>
-      <NavBar />
-      <SideBar/>
+      <NavBar navClicked={navClicked} setNavClicked={setNavClicked} />
+      <SideBar navClicked={navClicked}/>
     </div>
   );
 };
