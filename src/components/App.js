@@ -12,6 +12,7 @@ const App = () => {
     <div>
       <NavBar navClicked={navClicked} setNavClicked={setNavClicked} />
       <SideBar navClicked={navClicked}/>
+      
     </div>
   );
 };
