@@ -25,8 +25,7 @@
      @extend %cubic1
      @include flex(column)
      svg
-       height: auto
-       width: 40%
+
 
    p
      padding-top: 0.5rem
@@ -37,14 +36,13 @@
   @extend %cubic1
   width: 16%
   .icon-field
+   width: 100%
    margin-top: 2.6rem
-   @include flex
+   @include flex(row, flex-start, flex-start, no-wrap)
    i
-     @extend %cubic1
-     @include flex(row)
-     svg
-       height: auto
-       width: 25%
+    @include flex(row, flex-start, flex-start, no-wrap)
+    svg
+
    p
      margin-left: 1rem
      padding-top: 0.5rem
@@ -64,7 +62,17 @@
   &::-webkit-scrollbar-track 
     background: red
   div:first-child
+    padding: 0 10rem
+    width: 100%
     padding: 0.5rem
-    overflow: auto
+
+  i
+    @extend %cubic1
+    svg
+      height: auto
+      margin-bottom: 0.5rem
+      height: auto
+      width: 40%
+      transform: scale(2.5)
     
  

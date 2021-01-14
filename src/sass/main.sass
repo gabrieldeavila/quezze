@@ -1,26 +1,16 @@
-@import font&vars 
-@import all
-@import transitions
-@import mixins
-@import navbar
-@import sidebar
-//
+//File: main.sass
+//All "base" specific SASS partials
+@import 'base/variables' 
+@import 'base/mixins' 
+@import 'base/functions'
+@import 'base/classes' 
+@import 'base/normalize' 
+@import 'base/transitions' 
+@import 'base/functions'
 
-body
-  background-color: $cBlack
+//All "layout" specific SASS partials
+@import 'layout/navbar'
+@import 'layout/sidebar'
 
-.field-flex
-  @include flex(row, space-between)
 
-i
-  cursor: pointer
-  @extend %ease
-  font-style: normal
-  &:hover
-    transform: scale(1.05)
-    @extend %ease
 
-button
-  border: none
-  background: none
-  outline: none
