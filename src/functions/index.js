@@ -2,14 +2,14 @@ import React from "react";
 
 export const listIcons = (icons, selectedIcon) => {
   return icons.map((icon) => {
-    const name = icon.label.toLowerCase()
-    console.log(name === selectedIcon.toLowerCase())
-    const isSelected = selectedIcon.toLowerCase() ===  name ? "selected" : "normal"
+    const name = icon.label.toLowerCase();
+    const isSelected =
+      selectedIcon.toLowerCase() === name ? "color__c-grey" : "color__n-grey";
     return (
       <div key={icon.name} className={`icon-field ${isSelected}`}>
-        <i>
+        <div className="sidebar__icon">
           {icon.component} <p>{icon.name}</p>
-        </i>
+        </div>
       </div>
     );
   });
