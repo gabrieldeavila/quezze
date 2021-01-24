@@ -1,0 +1,43 @@
+.selected
+  i
+    p
+     color: $cGrey
+    svg
+     stroke: $cGrey 
+     fill: $cGrey 
+
+//sidebar-> closed or opened
+.isSidebar--closed
+  @extend %cubic1
+  width: 8%
+  .icon-field
+    .sidebar__icon
+    flex-direction: column
+    p
+      padding-top: 0.5rem
+      font-weight: 700
+      font-size: 11px
+
+.isSidebar--opened
+  @extend %cubic1
+  width: 16%
+  .icon-field
+    .sidebar__icon
+      width: 8rem
+      flex-direction: row
+      align-items: center
+      justify-content: flex-start
+      flex-wrap: nowrap
+      p
+        margin-left: 1rem
+        padding-top: 0.5rem
+        font-weight: 700
+        font-size: 1.2  rem
+  
+.isMain--left
+  @extend %cubic1
+  padding-left: 16%
+
+.isMain--normal
+  @extend %cubic1
+  padding-left: 8%
