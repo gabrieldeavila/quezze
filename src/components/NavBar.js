@@ -8,8 +8,7 @@ const NavBar = ({navClicked, setNavClicked}) => {
     setNavClicked(!navClicked)
   }
   return (
-    <div>
-      <nav>
+      <nav className="l-nav">
         <div className="field-flex">
           <div className="field-flex">
             <div onClick={changeNavValue} className="menu">
@@ -34,7 +33,6 @@ const NavBar = ({navClicked, setNavClicked}) => {
           </form>
         </div>
       </nav>
-    </div>
   );
 };
 
