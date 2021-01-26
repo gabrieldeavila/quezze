@@ -3,11 +3,11 @@ import _ from "lodash"
 
 export const fetchCategoriesAndGames = () => async(dispatch, getState) => {
   await dispatch(fetchCategories());
-
-  const test = _.chain(getState().categories)
-  .forEach(({id}) => {console.log(id)} )
+  _.chain(getState().categories)
+  .map('id')
+  .uniq()
+  .forEach((id) => {dispatch(fetchGames(id))} )
   .value()
-  console.log(test, "test")
 }
 
 export const fetchCategories = () => async (dispatch) => {
@@ -15,8 +15,9 @@ export const fetchCategories = () => async (dispatch) => {
   dispatch({ type: "FETCH_CATEGORIES", payload: response.data });
 };
 
-export const fetchGames = () => async (dispatch) => {
+export const fetchGames = (id) => async (dispatch) => {
   const response = await info.get('games.json');
-  dispatch({type: "FETCH_GAMES", payload: response.data})
+  const game = response.data.filter((game) => game.catId === id) 
+  dispatch({type: "FETCH_GAMES", payload: game})
 }
 
