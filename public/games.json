@@ -2,6 +2,7 @@
   {
     "name": "Como o Ancapistão funcionaria?",
     "question": ["Liberdades individuais sempre seriam as mais importantes", "Direito a propriedade", "Eu nem sou ancap mermao!"],
-    "right": 1
+    "right": 1,
+    "catId": 1
   }
 ]

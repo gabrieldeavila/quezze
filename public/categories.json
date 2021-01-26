@@ -1,10 +1,10 @@
 [
   {
-    "category" : "Politics",
+    "name" : "Politics",
     "id" : 1
   },
   {
-    "category" : "Economics",
+    "name" : "Economics",
     "id" : 2
   }
 ]
