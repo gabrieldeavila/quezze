@@ -8,20 +8,20 @@ class Categories extends React.Component {
   componentDidMount(){
     this.props.fetchCategoriesAndGames()
   }
-  render() {
-    // console.log(this.props.listGames)
+    render() {
+    console.log(this.props)
     const name = this.props.category.name;
     return (
       <div className="category">
         <div className="category-name">{name}</div>
+        {}
       </div>
     );
   }
 }
 
-const mapToState = (state, ownProperty) => {
-  console.log(ownProperty)
-  return { listGames: state.games.find(game => ownProperty.category.id === game.catId) };
+const mapStateToProps = (state, ownProperty) => {
+  return { listGames: state.games.find(game => {return ownProperty.category.id === game[0].catId}), dummy: "ooo" };
 };
 
-export default connect(mapToState, { fetchCategoriesAndGames })(Categories);
+export default connect(mapStateToProps, { fetchCategoriesAndGames })(Categories);
