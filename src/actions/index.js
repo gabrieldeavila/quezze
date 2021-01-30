@@ -10,14 +10,22 @@ export const fetchCategoriesAndGames = () => async(dispatch, getState) => {
   .value()
 }
 
-export const fetchCategories = () => async (dispatch) => {
-  const response = await info.get('categories.json');
-  dispatch({ type: "FETCH_CATEGORIES", payload: response.data });
-};
+export const fetchCategories = () => (dispatch) => _fetchCategories(dispatch) 
+  const _fetchCategories = _.memoize(async(dispatch)=>{
+    const response = await info.get('categories.json');
+    dispatch({ type: "FETCH_CATEGORIES", payload: response.data });
+  })
+;
 
-export const fetchGames = (id) => async (dispatch) => {
-  const response = await info.get('games.json');
-  const game = response.data.filter((game) => game.catId === id) 
-  dispatch({type: "FETCH_GAMES", payload: game})
-}
+
+export const fetchGames = (id) =>  (dispatch) => _fetchGames(id, dispatch)
+  const _fetchGames = _.memoize(async(id, dispatch)=>{
+    const response = await info.get('games.json');
+    const game = response.data.filter((game) => game.catId === id) 
+    if(game.length === 0){
+      return null
+    }
+    dispatch({type: "FETCH_GAMES", payload: game})
+})
+
 
