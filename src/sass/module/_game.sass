@@ -1,0 +1,33 @@
+.game
+  @include flex(column, space-evenly)
+  width: 18rem
+  height: 18rem
+  background: $cGrey
+  padding: 2rem
+  border-radius: 5px
+
+  &-name
+    color: $cBlack
+    font-weight: 700
+    text-align: center
+
+  &-description
+    font-weight: 400
+    color: $cBlack
+    @include flex(row, flex-start)
+    height: 5rem
+
+  &-button
+    @include flex
+    button
+      font-weight: 700
+      width: 10rem
+      height: 2.5rem
+      border-radius: 10px
+      cursor: pointer
+      background: $cBlack
+      color: $cGrey
+      @extend %cubic1
+      &:hover
+        background: darken($cBlack, 10)
+        @extend %cubic1
