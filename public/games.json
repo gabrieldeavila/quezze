@@ -3,6 +3,33 @@
     "name": "Como o Ancapistão funcionaria?",
     "question": ["Liberdades individuais sempre seriam as mais importantes", "Direito a propriedade", "Eu nem sou ancap mermao!"],
     "right": 1,
-    "catId": 1
+    "catId": 2,
+    "id": 4,
+    "desc": "Então esse jogo é muito loucooooo"
+  },
+  {
+    "name": "Como o Ancapistão funcionaria?",
+    "question": ["Liberdades individuais sempre seriam as mais importantes", "Direito a propriedade", "Eu nem sou ancap mermao!"],
+    "right": 1,
+    "catId": 2,
+    "id": 5,
+    "desc": "Então esse jogo é muito loucooooo"
+  },
+  {
+    "name": "Como o Ancapistão funcionaria?",
+    "question": ["Liberdades individuais sempre seriam as mais importantes", "Direito a propriedade", "Eu nem sou ancap mermao!"],
+    "right": 1,
+    "catId": 2,
+    "id": 6,
+    "desc": "Então esse jogo é muito loucooooo"
+  },
+  {
+    "name": "Como o Ancapistão funcionaria?",
+    "question": ["Liberdades individuais sempre seriam as mais importantes", "Direito a propriedade", "Eu nem sou ancap mermao!"],
+    "right": 1,
+    "catId": 2,
+    "id": 7,
+    "desc": "Então esse jogo é muito loucooooo"
   }
+
 ]
